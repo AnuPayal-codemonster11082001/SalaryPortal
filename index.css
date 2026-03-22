@@ -1,0 +1,134 @@
+:root{
+    --color-title-backbround:#fd7777c4;
+    --color-dashboard-background:#77cafd85;
+    --color-page-background:#b4c7fd;
+}
+
+.page-background{
+    background-color: var(--color-page-background);
+    margin: 0%;
+}
+
+.dashboard_tittle{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    margin: 0px 20px;
+    border-radius: 20px;
+    justify-content:center;
+    background-color: var(--color-title-backbround);
+}
+
+.dashboard_back{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 20px 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--color-dashboard-background);
+    justify-content: space-evenly;
+    align-items:center;
+    border: 5px var(--color-dashboard-background);
+    border-style: groove;
+}
+
+.dashboard_main{
+    display: block;
+    border-radius: 20px;
+    width: 40% 400px;
+    height: 600px;
+    background-color: var(--color-dashboard-background);
+    border: 5px var(--color-dashboard-background);
+    border-style: groove;
+    padding: 10px;
+}
+.dashboard_main h1{
+    text-align: center;
+}
+
+.input{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.expense-input{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+}
+
+.expense-input > .input{
+    width: 40%;
+}
+
+.field-input{
+    width: 90%;
+}
+
+.submit-button{
+    margin-top: 50px;
+}
+
+.expense-list{
+    display: block;
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    border-style: double;
+    overflow: scroll;
+}
+
+#expenses-table{
+    display: table;
+    width: 100%;
+    border: 1px;
+}
+
+th{
+    border: 2px solid;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(255,255,255);
+}
+td{
+    border: 1px soild;
+    text-align: center;
+    border: 1px dotted;
+}
+.exp{
+    width: 65%;
+}
+.cst{
+    width: 25%;
+}
+.esc{
+    width: 20%;
+}
+
+.summation{
+    text-align: right;
+    margin: 2px;
+}
+
+#balance{
+}
+.low-balance{
+    background-color: red;
+    color: yellow;
+    border-radius: 5px;
+}
+
+#pie-chart{
+    width: 600px;
+    height: 600px;
+    background-color: rgb(255,255,255);
+}
+
+@media screen and (max-width:960px){
+    .dashboard_back{
+        flex-direction: column;
+    }
+    
+}

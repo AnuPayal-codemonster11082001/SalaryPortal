@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+</head>
+
+<body class="page-background" onload="javascript:documentLoaded()">
+    <div class="dashboard_tittle">
+        <h1>
+            Salary Dashboard
+        </h1>
+    </div>
+    <div class="dashboard_back">
+
+        <div class="dashboard_main" id="input-area">
+           <h1>
+                Enter data
+           </h1>
+           <div style="display: flex;">
+                <div class="input" id="value-salary">
+                    <p>Total Salary</p>
+                    <form action="">
+                         <input type="text" id="salary-input-field" onchange="salary_changed()">
+                    </form>
+                </div>
+                <div>
+                    <select name="" id="currency-selector" style="margin-top: 58px;" onchange="change_to_currency()">
+                        <option value="rupee">Rupee</option>
+                        <option value="dollar">Dollar</option>
+                    </select>
+                </div>
+                <div>
+                    <button style="margin-top: 58px;" onclick="export_pdf()">Export PDF</button>
+                </div>
+           </div>
+
+           <div class="expense-input">
+                <div class="input" id="value-salary">
+                    <p>Expense Name</p>
+                    <form action="">
+                        <input type="text" class="field-input" id="expenseName-input-field">
+                    </form>
+                </div>
+                <div class="input" id="value-salary">
+                    <p>Cost</p>
+                    <form action="">
+                        <input type="text" class="field-input" id="expenseCost-input-field">
+                    </form>
+                </div>
+                <button class="submit-button" onclick="submitButtonClicked()">
+                    Submit
+                </button>
+            </div>
+
+            <div class="expense-list">
+                 <table id="expenses-table">
+                    <tr>
+                        <th class="exp">Expense</th>
+                        <th class="cst">Cost</th>
+                        <th class="esc">🗑️</th>
+                    </tr>
+                </table> 
+            </div>
+
+            <p class="summation" id="total-salary">Total Salary:</p>
+            <p class="summation" id="total-expenses">Total Expenses:</p>
+            <p class="summation" id="balance">Balance:</p>
+
+        </div>
+
+        <div class="dashboard_main" id="chart">
+            <canvas id="pie-chart">
+            </canvas>
+        </div>
+        
+        
+    <script src="index.js"></script>
+    </div>
+</body>
+</html>
